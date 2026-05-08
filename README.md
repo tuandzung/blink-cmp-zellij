@@ -44,7 +44,11 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim)
             -- only suggest completions from `zellij` if the `trigger_chars`
             -- are used
             triggered_only = false,
-            trigger_chars = { "." }
+            trigger_chars = { "." },
+            -- cache duration in milliseconds; within this window, repeated
+            -- completion requests return cached words without spawning
+            -- subprocesses (default 500)
+            cache_ttl = 500,
           },
         },
       }
